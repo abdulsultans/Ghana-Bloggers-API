@@ -4,7 +4,8 @@
   "description": "a ghanaian bloggers database",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "nodemon server.js"
   },
   "author": "Abdul Sultan Femi",
   "license": "MIT",

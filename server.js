@@ -14,7 +14,6 @@ connectDB();
 
 //Middle wares
 app.use(express.json());
-
 app.use(morgan("dev"));
 
 //Routes
