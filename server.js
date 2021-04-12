@@ -26,4 +26,4 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 2021;
 
-app.listen(PORT, () => console.log(`Server Started Successfully on ${PORT}`));
+app.listen(PORT, () => console.log(`Server Started on https://localhost:${PORT}`));

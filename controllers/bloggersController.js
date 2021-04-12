@@ -4,7 +4,7 @@ const Blogger = require("../models/bloggerSchema");
 const createBlogger = async (req, res) => {
   const newBlogger = new Blogger({
     name: req.body.name,
-    position: req.body.position,
+    blog: req.body.blog,
     email: req.body.email,
     dob: req.body.dob,
     region: req.body.region,
@@ -32,14 +32,14 @@ const getSingleBlogger = async (req, res) => {
 const updateBlogger = async (req, res) => {
   const foundBlogger = await Blogger.findById(req.params._id);
 
-    const {name, position,email,dob, region} = req.body
+  const { name, blog, email, dob, region } = req.body;
 
   if (foundBlogger) {
     foundBlogger.name = name;
-    foundBlogger.position = position;
+    foundBlogger.blog = blog;
     foundBlogger.email = email;
     foundBlogger.dob = dob;
-    foundBlogger.region=region;
+    foundBlogger.region = region;
 
     const updatedBlogger = await foundBlogger.save();
     res.json({ updatedBlogger });
