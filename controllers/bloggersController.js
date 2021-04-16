@@ -52,7 +52,7 @@ const deleteBlogger = async (req, res) => {
   const foundBlogger = await Blogger.findById(req.params._id);
   if (foundBlogger) {
     foundBlogger.remove();
-    res.json({ msg: `${foundBlogger.name} removed` });
+    res.json({ msg: `${foundBlogger.name} removed`});
   } else {
     res.status(404).json({ error: "Blogger not found" });
   }

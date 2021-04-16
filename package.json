@@ -5,13 +5,16 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "nodemon server.js"
+    "start": "nodemon server.js"
   },
   "author": "Abdul Sultan Femi",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.3",
     "morgan": "^1.10.0"
   },

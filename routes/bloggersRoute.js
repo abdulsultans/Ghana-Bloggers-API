@@ -1,4 +1,5 @@
 const express = require("express");
+const protect = require("../middlewares/authMiddlewares")
 
 const {
   createBlogger,
@@ -10,11 +11,11 @@ const {
 
 const router = express.Router();
 
-router.route("/").post(createBlogger).get(getAllBloggers);
+router.route("/").post(protect, createBlogger).get(protect, getAllBloggers);
 router
   .route("/:_id")
-  .get(getSingleBlogger)
-  .put(updateBlogger)
-  .delete(deleteBlogger);
+  .get(protect, getSingleBlogger)
+  .put(protect, updateBlogger)
+  .delete(protect, deleteBlogger);
 
 module.exports = router;

@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const app = express();
+const usersRoute = require("./routes/usersRoute")
 
 const connectDB = require("./config/connectDB");
 
@@ -18,6 +19,7 @@ app.use(morgan("dev"));
 
 //Routes
 app.use("/api/v6/bloggers", bloggersRoute);
+app.use("/api/v6/users", usersRoute);
 
 //Default / Home route
 app.get("/", (req, res) => {
